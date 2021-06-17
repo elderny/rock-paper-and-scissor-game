@@ -22,7 +22,7 @@ void points()
     cout << "Player Points: " << ps << endl;
     cout << "Computer Points: " << cs << endl;
 }
-void check_win(int a, int r)
+void check_win(char a, int r)
 {
     switch (a)
     {
