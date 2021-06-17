@@ -13,15 +13,19 @@ Telegram: elderny1
 
 using namespace std;
 
+//Some variables
 string pn, get[] = {"Rock", "Paper", "Scissor"};
 int ps = 0, cs = 0, trial, game, random;
 char gv;
 
+//Just point function
 void points()
 {
     cout << "Player Points: " << ps << endl;
     cout << "Computer Points: " << cs << endl;
 }
+
+//Creating Function for checking winner
 void check_win(char a, int r)
 {
     switch (a)
@@ -102,9 +106,12 @@ void check_win(char a, int r)
         break;
 
     default:
+            cout<<"Unkown, key Pressed!"<<endl;
         break;
     }
 }
+
+//Creating Function for End game
 void win()
 {
     if (ps > cs)
@@ -155,12 +162,16 @@ int main()
 
     int trials = trial;
 
+    //First loop running according to number of games!
     for (int i = 0; i < game;)
     {
         system("cls");
         cout << "Game No: " << i + 1 << endl;
+        
+        //Second Loop running according to number of trials!
         for (int j = 0; j < trial + 1;)
         {
+            //getting random number between 0 - 2
             srand(time(NULL));
             random = rand() % 3;
 
@@ -178,12 +189,15 @@ int main()
             cout << "Computer Selected: " << get[random] << endl
                  << endl;
             cout << "\n<-- Results -->\n\n";
+            
+            //running deciding function 
             check_win(gv, j);
             cout << "Trails Left: " << trials << endl;
             j++;
             trials = trials - 1;
         }
         win();
+        //resetting everything as it was before just to make sure that it doesn't clashs next time the loop is called
         trials = trial;
         ps = 0;
         cs = 0;
