@@ -1,8 +1,8 @@
 /*
 
-Author: Elderny
+Author: Elderny/Faris
 Purpose: Practice
-Data: 1706-2021
+Data: 17-06-2021 / 4:00pm (5:30+ utc)
 Telegram: elderny1
 
 */
